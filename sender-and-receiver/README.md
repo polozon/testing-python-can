@@ -13,3 +13,13 @@ uv run receiver_app.py
 C-b q 0
 uv run sender_app.py 
 ```
+
+Man kan också testa så här utan tmux, sender körs i bakgrunden:
+
+```bash
+uv run sender_app.py > /dev/null &
+uv run receiver_app.py
+Ctrl+C
+fg
+Ctrl+C
+```
